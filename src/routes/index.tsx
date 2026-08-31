@@ -25,36 +25,31 @@ export const Route = createFileRoute("/")({
 
 const pecas = [
   {
-    titulo: "Guia de leitura rápida",
-    linha: "Como tirar o argumento central de um artigo de 30 páginas em 20 minutos.",
+    titulo: "Guia prático de IA para trabalhos acadêmicos",
+    linha:
+      "Como pedir ajuda certa pra IA sem cair em texto genérico, o paradoxo do contexto, comparativo honesto entre as ferramentas e como evitar fonte inventada.",
   },
   {
-    titulo: "Prompts de esqueleto de trabalho",
-    linha: "Monta a estrutura do texto antes de escrever qualquer parágrafo.",
+    titulo: "Cheat sheet de prompts prontos",
+    linha:
+      "Comandos pra colar: estrutura de trabalho, resumo, entender texto difícil, resenha crítica, revisão de citação, referência bibliográfica, apresentação de seminário, pesquisa de campo, e o comando anti-robô pra tirar a cara de texto de IA.",
   },
   {
-    titulo: "Prompts de revisão crítica",
-    linha: "Faz a IA apontar os furos do seu argumento em vez de elogiar.",
+    titulo: "Checklist de formatação ABNT",
+    linha: "Uma página só pra conferir espaçamento, margem e recuo de citação antes de entregar.",
   },
   {
-    titulo: "Banco de perguntas de pesquisa",
-    linha: "Transforma um tema vago numa pergunta que dá pra responder.",
+    titulo: "Template Word em ABNT",
+    linha: "Arquivo do Word já formatado com capa, folha de rosto e sumário. Só digitar por cima.",
   },
   {
-    titulo: "Guia de citação e fonte",
-    linha: "O que checar antes de confiar em qualquer referência que a IA cita.",
+    titulo: "Guia de slides de seminário",
+    linha:
+      "Comando pra transformar o trabalho em roteiro de apresentação, separando o que fica escrito na tela do que você fala.",
   },
   {
-    titulo: "Prompts de reescrita na sua voz",
-    linha: "Tira o tom de robô sem mudar o conteúdo do que você escreveu.",
-  },
-  {
-    titulo: "Checklist de entrega",
-    linha: "As dez coisas pra conferir na noite anterior ao prazo.",
-  },
-  {
-    titulo: "Guia de apresentação e defesa",
-    linha: "Como falar do trabalho em cinco minutos sem ler slide.",
+    titulo: "Estudo de caso",
+    linha: "Simulação mostrando os comandos em sequência, do início ao fim de um trabalho.",
   },
 ];
 
