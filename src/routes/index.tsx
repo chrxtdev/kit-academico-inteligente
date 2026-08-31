@@ -194,20 +194,33 @@ function Index() {
         <div className="paper-sheet mx-auto max-w-3xl px-8 py-12 md:px-14">
           <h2 className="font-display text-3xl md:text-4xl">Quanto custa</h2>
           <div className="mt-8 flex flex-wrap items-end gap-x-6 gap-y-2">
-            <span className="text-2xl text-neutral-500 line-through">R$ 97</span>
-            <span className="font-display text-6xl leading-none text-primary">R$ 37</span>
+            <span className="font-display text-6xl leading-none text-primary">
+              R$ {total.toFixed(2).replace(".", ",")}
+            </span>
             <span className="pb-2 text-base text-neutral-600">pagamento único</span>
           </div>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-neutral-700">
-            R$ 37 é o preço de lançamento e vale até 30 de setembro de 2026. Depois dessa data o
-            kit volta pra R$ 97 e continua o mesmo arquivo — quem comprar agora recebe as
-            atualizações sem pagar de novo.
+            R$ 37 até 30 de setembro de 2026. Depois disso, R$ 97.
           </p>
+
+          <label className="mt-8 flex cursor-pointer items-start gap-4 rounded-lg border border-border/70 p-4 transition-colors hover:border-border">
+            <input
+              type="checkbox"
+              className="mt-1 h-4 w-4 accent-primary"
+              checked={comBump}
+              onChange={(e) => setComBump(e.target.checked)}
+            />
+            <span className="text-base leading-snug text-neutral-800">
+              Quero adicionar o miniguia bônus: como usar o NotebookLM pra resumir textos pesados e
+              gerar testes de revisão antes da prova, por mais R$ 9,90.
+            </span>
+          </label>
+
           <a
             href="#comprar"
-            className="mt-9 inline-flex items-center bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            className="mt-8 inline-flex items-center bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Quero meu kit
+            Quero meu kit — R$ {total.toFixed(2).replace(".", ",")}
           </a>
         </div>
       </section>
