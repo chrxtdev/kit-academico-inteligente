@@ -79,9 +79,12 @@ const cartoes = [
   { rot: 9, x: 54, y: 8, label: "Checklist de entrega", delay: "0.35s" },
 ];
 
+const precoBase = 14.99;
+const precoBump = 5.8;
+
 function Index() {
   const [comBump, setComBump] = useState(false);
-  const total = comBump ? 46.9 : 37;
+  const total = comBump ? precoBase + precoBump : precoBase;
 
   return (
     <main className="min-h-screen bg-background">
@@ -108,7 +111,7 @@ function Index() {
                 Quero meu kit
               </a>
               <span className="text-sm text-muted-foreground">
-                Download imediato · R$ 37 no lançamento
+                Download imediato · R$ 14,99
               </span>
             </div>
           </div>
@@ -200,7 +203,7 @@ function Index() {
             <span className="pb-2 text-base text-neutral-600">pagamento único</span>
           </div>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-neutral-700">
-            R$ 37 até 30 de setembro de 2026. Depois disso, R$ 97.
+            De R$ 30,99 por R$ 14,99 enquanto durar o lote promocional.
           </p>
 
           <label className="mt-8 flex cursor-pointer items-start gap-4 rounded-lg border border-border/70 p-4 transition-colors hover:border-border">
@@ -212,7 +215,7 @@ function Index() {
             />
             <span className="text-base leading-snug text-neutral-800">
               Quero adicionar o miniguia bônus: como usar o NotebookLM pra resumir textos pesados e
-              gerar testes de revisão antes da prova, por mais R$ 9,90.
+              gerar testes de revisão antes da prova, por mais R$ 5,80.
             </span>
           </label>
 
@@ -237,18 +240,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Depoimentos - estado vazio */}
-      <section className="mx-auto max-w-3xl px-6 py-20">
-        <h2 className="font-display text-2xl md:text-3xl">Quem já usou</h2>
-        <div className="mt-6 border border-dashed border-border p-8">
-          <p className="text-lg leading-relaxed text-muted-foreground">
-            Ainda não tem nada aqui. O kit acabou de sair e prefiro deixar o espaço vazio a
-            inventar depoimento. Assim que chegarem os primeiros relatos de quem usou nos
-            trabalhos, eles aparecem nesta seção com nome e curso.
-          </p>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="mx-auto max-w-3xl px-6 pb-20">
         <h2 className="font-display text-2xl md:text-3xl">Perguntas</h2>
@@ -269,7 +260,7 @@ function Index() {
             Próximo trabalho, do jeito certo.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Oito peças, download na hora, R$ 37 até 30 de setembro.
+            Oito peças, download na hora, R$ 14,99 enquanto durar o lote promocional.
           </p>
           <a
             href="#comprar"
@@ -278,7 +269,8 @@ function Index() {
             Quero meu kit
           </a>
           <p className="mt-12 text-sm text-muted-foreground">
-            Kit de Sobrevivência Acadêmica · contato@kitacademico.com.br
+            Kit de Sobrevivência Acadêmica · feito pra quem quer entregar trabalho com cara de
+            próprio.
           </p>
         </div>
       </footer>
