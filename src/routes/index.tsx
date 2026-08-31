@@ -80,6 +80,9 @@ const cartoes = [
 ];
 
 function Index() {
+  const [comBump, setComBump] = useState(false);
+  const total = comBump ? 46.9 : 37;
+
   return (
     <main className="min-h-screen bg-background">
       {/* Herói */}
